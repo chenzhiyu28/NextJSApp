@@ -1,5 +1,12 @@
 import Link from "next/link";
 import "./globals.css";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "RootPage",
+  description: "This is the root page of the app"
+}
 
 
 export default function RootLayout
