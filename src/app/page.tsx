@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 async function getTodos() {
   await wait(2000);
   throw new Error("fake error");
@@ -8,7 +10,15 @@ async function getTodos() {
 
 export default async function Home() {
   const todos = await getTodos();
-  return (<h1>{todos.length}</h1>)
+  return (
+  <>
+  <h1>Todos</h1>
+  <Suspense fallback={"loading"}>
+    <h1>{todos.length}</h1> 
+    {/* data fetching should stay inside the suspense */}
+  </Suspense>
+  </>
+)
 }
 
 
