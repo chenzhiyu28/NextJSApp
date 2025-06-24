@@ -1,3 +1,4 @@
+import Example from "@/app/components/Example";
 import { Todo } from "@/app/page"
 import { notFound } from "next/navigation";
 
@@ -11,5 +12,9 @@ export default async function TodoPages(
 ) {
     const todo = await getTodo(params.id)
     if (todo.title == null) return notFound();
-    return <h1>{params.id} - {todo.title}</h1>
+    return <>
+      <h1>{params.id} - {todo.title}</h1>
+      <Example />
+    </>
+    
 }
