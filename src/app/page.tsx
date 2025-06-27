@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "homePage",
+  description: "Homepage of next.js app."
+}
+
 export interface Todo {
   id: number;
   title: string;
