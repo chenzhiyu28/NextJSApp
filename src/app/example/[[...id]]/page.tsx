@@ -1,3 +1,9 @@
+
+export const metadata = {
+    title: "example",
+    description: "this is an example page"
+}
+
 export default function Page({params} : {
     params: {
         id?: string[]
