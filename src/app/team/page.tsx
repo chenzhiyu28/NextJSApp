@@ -3,7 +3,7 @@ import React from 'react'
 
 export const metadata: Metadata = {
   title: "About",
-  description: "This is the about page of the app"
+  description: "This is the about page of the app."
 }
 
 export default function page() {
