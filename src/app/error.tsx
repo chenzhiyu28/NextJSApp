@@ -6,3 +6,7 @@ export default function Error({ error, reset }: any) {
         <button onClick={reset}>Retry</button>
     </>)
 }
+
+function wait(duration: number) {
+    return new Promise (resolve => setTimeout(resolve,duration));
+}
